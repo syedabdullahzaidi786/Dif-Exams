@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 id="user-id-header" class="hide"></h1>
+    </header>
+
+    <div class="container">
+        <div class="card" id="login-container">
+            <h1><i class="fa-solid fa-lock" style="color: #33c0eb;"></i> DIF EXAMS</h1>
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input type="number" id="user-id" placeholder="Student ID" required>
+            </div>
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button id="login-btn" class="btn">Login</button>
+            <p id="login-error" class="error hide">Invalid ID or Password</p>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>

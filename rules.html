@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Rules and Start</title>
+    <link rel="stylesheet" href="rule.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Add these styles to rule.css or in a <style> tag */
+
+        /* Style for the card containing buttons */
+        .start-exam-card {
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .start-exam-card button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .start-exam-card button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Darul Ilm Foundation Logo" class="logo">
+        <h1>Welcome To DIF Exams</h1>
+    </header>
+    
+    <div class="content-wrapper">
+        <!-- Message Card -->
+        <div class="message-card">
+            <h2>Notifications</h2>
+            <p>Webcam Disabled!</p>
+            <p>Microphone Disabled!</p>
+            <h3>AI Agent Monitoring Enabled!</h3>
+        </div>
+
+        <!-- User Info Card -->
+        <div id="user-info-card" class="user-info-card">
+            <h2>User Information</h2>
+            <p><strong>ID:</strong> <span id="user-id-display"></span></p>
+            <p><strong>Name:</strong> <span id="user-name-display"></span></p>
+        </div>
+    </div>
+    
+    <main>
+        <section class="rules">
+            <h2>Exam Rules and Regulations</h2>
+            <div class="rules-container">
+                <div class="rules-col">
+                    <h3>English</h3>
+                    <ul>
+                        <li>No talking during the exam.</li>
+                        <li>No electronic devices allowed.</li>
+                        <li>All questions are compulsory.</li>
+                        <li>Follow the invigilator's instructions at all times.</li>
+                        <li>AI Agent Monitoring Your Exam performance!</li>
+                    </ul>
+                </div>
+                <div class="rules-col-urdu">
+                    <h3>اردو</h3>
+                    <ul>
+                        <li>امتحان کے دوران بات کرنے کی اجازت نہیں ہے۔</li>
+                        <li>الیکٹرانک ڈیوائسز کی اجازت نہیں ہے۔</li>
+                        <li>تمام جوابات سیاہی میں لکھے جائیں۔</li>
+                        <li>ہمیشہ نگران کی ہدایات پر عمل کریں۔</li>
+                        <li>اے آئی ایجنٹ آپ کے امتحان کی کارکردگی کی نگرانی کر رہا ہے۔</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Card for Ready to Start and Start Exam buttons -->
+        <section class="start-exam">
+            <div class="start-exam-card">
+                <h2>Ready to Start?</h2>
+                <button onclick="startExam()">Start Exam</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Darul Ilm Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function startExam() {
+            window.location.href = 'index.html'; // Redirect to quiz.html
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const userIdDisplay = document.getElementById('user-id-display');
+            const userNameDisplay = document.getElementById('user-name-display');
+
+            const storedUserId = localStorage.getItem('userId');
+            const storedUserName = localStorage.getItem('userName');
+
+            if (storedUserId && storedUserName) {
+                userIdDisplay.textContent = storedUserId;
+                userNameDisplay.textContent = storedUserName;
+            } else {
+                // If user info is not available, redirect to login page
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

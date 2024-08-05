@@ -1,0 +1,259 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f4f7;
+    color: #333;
+}
+
+header {
+    background: #0056b3;
+    color: white;
+    padding: 10px 20px; /* Increased padding for better spacing */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+.logo {
+    width: 180px; /* Adjusted size */
+    height: auto;
+    margin-bottom: 0%; /* Increased margin for separation */
+    margin-top: 1%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 2%;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Message Card Styling */
+.message-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+    margin-bottom: 20px; /* Space between message and user info cards */
+    text-align: center;
+}
+
+.message-card h2 {
+    margin: 0 0 15px 0;
+    color: #0056b3;
+    font-size: 18px;
+}
+
+.message-card p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #e00f0f;
+}
+.message-card h3{
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 100;
+    color: #08c421;
+}
+
+/* User Info Card Styling */
+.user-info-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+    text-align: center;
+}
+
+.user-info-card h2 {
+    margin: 0 0 20px 0;
+    color: #0056b3;
+    font-size: 20px;
+}
+
+.user-info-card p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Exam Rules Section */
+h2{
+    padding: 0%;
+    text-align: center;
+    text-decoration: wavy;
+    color: #004494;
+    text-decoration-style: double;
+}
+.rules-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto; /* Centered and added margin */
+}
+
+
+.rules-col{
+    flex: 1;
+    margin: 0 10px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.rules-col-urdu{
+    flex: 1;
+    margin: 0 10px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: right;
+}
+.rules-col h3, .rules-col-urdu h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #0056b3;
+}
+
+.rules ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rules ul li {
+    background: #e9f0fc;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Start Exam Section */
+.start-exam {
+    text-align: center;
+    margin-top: 40px; /* Space between other content */
+}
+
+/* Style for the card containing buttons */
+.start-exam-card {
+    display: inline-block;
+    border: 1px solid #ddd; /* Light border for subtle separation */
+    border-radius: 16px; /* More rounded corners */
+    padding: 30px;
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0); /* Soft gradient background */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Soft shadow for a subtle lift effect */
+    margin: 0 auto; /* Center the card horizontally */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Smooth transition */
+    overflow: hidden; /* Prevent content overflow */
+    position: relative; /* Positioning for pseudo-elements */
+}
+
+.start-exam-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px; /* Decorative stripe at the top */
+    background: linear-gradient(90deg, #0056b3, #08c421); /* Gradient effect */
+    border-bottom: 1px solid #ddd; /* Border for separation */
+}
+
+.start-exam-card:hover {
+    transform: translateY(-10px); /* Lift card on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    background: linear-gradient(135deg, #e0e0e0, #f9f9f9); /* Slightly altered gradient on hover */
+}
+
+.start-exam-card h2 {
+    margin-bottom: 20px;
+    font-size: 24px; /* Larger font size for emphasis */
+    color: #0056b3;
+    font-weight: 700; /* Bold font for better emphasis */
+    position: relative;
+}
+
+.start-exam-card button {
+    background-color: #08c421;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 18px; /* Larger font size for better readability */
+    border-radius: 25px; /* More rounded corners for the button */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block; /* Block-level button for horizontal centering */
+    margin: 20px auto 0; /* Center button horizontally with margin */
+}
+
+.start-exam-card button:hover {
+    background-color: #0056b3; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.start-exam-card button:active {
+    background-color: #004494;
+    transform: scale(0.95); /* Slightly shrink button on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .start-exam-card {
+        padding: 20px;
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .start-exam-card h2 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .start-exam-card button {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        padding: 12px 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #e9f0fc;
+    text-align: center;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rules-container {
+        flex-direction: column;
+    }
+
+    .rules-col, .rules-col-urdu {
+        margin: 0 0 20px 0;
+    }
+}
