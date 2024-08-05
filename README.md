@@ -1,2 +1,2 @@
 # Dif Exams
- Login Page With Rules & Regulations age
+ Login Page With Rules & Regulations Page
